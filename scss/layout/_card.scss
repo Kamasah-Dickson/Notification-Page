@@ -1,0 +1,135 @@
+@use "../utils" as u;
+@use "../global" as g;
+.card {
+	width: min(100% - u.em(15), u.rem(700));
+	margin-inline: auto;
+	background-color: g.$White;
+	padding: u.em(15) u.rem(12);
+	margin-top: u.em(10);
+	border-radius: u.rem(20);
+
+	@include u.breakpoints(medium) {
+		padding: u.em(17) u.rem(25);
+	}
+	.card-header {
+		@include u.flex;
+		margin-bottom: u.em(35);
+		.notifications {
+			font-weight: g.$large;
+			.count {
+				color: g.$White;
+				background-color: g.$Blue;
+				font-weight: g.$small;
+				font-size: clamp(u.rem(5), u.rem(10) + 2vw, u.rem(20));
+				padding: u.em(3) u.em(10);
+				border-radius: u.rem(5);
+			}
+		}
+		.mark {
+			font-weight: g.$small;
+			font-size: clamp(u.rem(6), u.rem(7) + 2vw, u.rem(22));
+			cursor: pointer;
+            transition:.3s ease;
+            &:hover{
+                color:g.$Blue;
+            }
+		}
+	}
+	.card-body {
+		@include u.flex;
+		flex-direction: column;
+		gap: u.rem(10);
+		.box1,
+		.box2,
+		.box3 {
+			background-color: g.$Very-light-grayish-blue;
+			p {
+				position: relative;
+				span.indicator {
+					display: inline-block;
+					width: u.rem(5);
+					height: u.rem(5);
+					background-color: g.$Red;
+					border-radius: 100%;
+					margin-left: u.rem(5);
+				}
+			}
+		}
+		.box4 {
+			.anonymous {
+				border: u.rem(1) solid g.$Light-grayish-blue-2;
+				padding: u.em(15);
+				font-size: clamp(u.rem(6), u.rem(8) + 2vw, u.rem(16));
+				grid-area: ano;
+				margin-top: u.rem(15);
+				color: g.$Dark-grayish-blue;
+				line-height: 1.4;
+				border-radius: u.rem(7);
+			}
+		}
+		.box5 {
+			@include u.flex;
+			img.second {
+				width: u.rem(35);
+				align-self: flex-start;
+				margin-left: u.rem(3);
+			}
+		}
+		.message {
+			padding: u.em(13) u.em(13);
+			width: 100%;
+			border-radius: u.rem(5);
+			.content {
+				display: grid;
+				grid-template-areas:
+					"img para "
+					"img time "
+					"img ano";
+				justify-content: start;
+				img {
+					width: u.rem(40);
+					align-self: flex-start;
+					grid-area: img;
+				}
+				p {
+					margin-left: u.em(10);
+					grid-area: para;
+					font-size: clamp(u.rem(6), u.rem(8) + 2vw, u.rem(16));
+					line-height: 1.4;
+					color: g.$Dark-grayish-blue;
+					.name {
+						font-weight: g.$large;
+						color: g.$Very-dark-blue;
+                        transition: .3s ease;
+                        cursor:pointer;
+                        &:hover{
+                            color: g.$Blue;
+                        }
+
+					}
+				
+					.tag {
+                        color: g.$Dark-grayish-blue;
+                        font-weight: g.$large;
+                        font-size: clamp(u.rem(6), u.rem(6) + 2vw, u.rem(16));
+						cursor: pointer;
+                        transition: .3s ease;
+						&:hover {
+							color: g.$Blue;
+						}
+					}
+					.tag2 {
+						color: g.$Very-dark-blue;
+					}
+				}
+			}
+			.time {
+				grid-area: time;
+				margin-left: u.em(10);
+				font-size: u.rem(13);
+				margin-top: u.em(6);
+				color: g.$Dark-grayish-blue;
+			}
+		}
+	}
+}

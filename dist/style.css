@@ -1,0 +1,159 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+body {
+  font-size: 1.125rem;
+  background-color: hsl(210deg, 60%, 98%);
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: clamp(0.5625rem, 0.625rem + 2vw, 1.6875rem);
+}
+
+@font-face {
+  font-family: "Josefin Sans", sans-serif;
+  src: url("../../assets/fonts/PlusJakartaSans-VariableFont_wght.ttf"), url("../../assets/fonts/static/PlusJakartaSans-ExtraBold.ttf"), url("../../assets/fonts/static/PlusJakartaSans-Medium.ttf;");
+  font-weight: 500 800;
+}
+.card {
+  width: min(100% - 0.9375em, 43.75rem);
+  margin-inline: auto;
+  background-color: hsl(0deg, 0%, 100%);
+  padding: 0.9375em 0.75rem;
+  margin-top: 0.625em;
+  border-radius: 1.25rem;
+}
+@media (min-width: 43.75em) {
+  .card {
+    padding: 1.0625em 1.5625rem;
+  }
+}
+.card .card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2.1875em;
+}
+.card .card-header .notifications {
+  font-weight: 800;
+}
+.card .card-header .notifications .count {
+  color: hsl(0deg, 0%, 100%);
+  background-color: hsl(219deg, 85%, 26%);
+  font-weight: 500;
+  font-size: clamp(0.3125rem, 0.625rem + 2vw, 1.25rem);
+  padding: 0.1875em 0.625em;
+  border-radius: 0.3125rem;
+}
+.card .card-header .mark {
+  font-weight: 500;
+  font-size: clamp(0.375rem, 0.4375rem + 2vw, 1.375rem);
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.card .card-header .mark:hover {
+  color: hsl(219deg, 85%, 26%);
+}
+.card .card-body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+.card .card-body .box1,
+.card .card-body .box2,
+.card .card-body .box3 {
+  background-color: hsl(210deg, 60%, 98%);
+}
+.card .card-body .box1 p,
+.card .card-body .box2 p,
+.card .card-body .box3 p {
+  position: relative;
+}
+.card .card-body .box1 p span.indicator,
+.card .card-body .box2 p span.indicator,
+.card .card-body .box3 p span.indicator {
+  display: inline-block;
+  width: 0.3125rem;
+  height: 0.3125rem;
+  background-color: hsl(1deg, 90%, 64%);
+  border-radius: 100%;
+  margin-left: 0.3125rem;
+}
+.card .card-body .box4 .anonymous {
+  border: 0.0625rem solid hsl(205deg, 33%, 90%);
+  padding: 0.9375em;
+  font-size: clamp(0.375rem, 0.5rem + 2vw, 1rem);
+  grid-area: ano;
+  margin-top: 0.9375rem;
+  color: hsl(219deg, 12%, 42%);
+  line-height: 1.4;
+  border-radius: 0.4375rem;
+}
+.card .card-body .box5 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.card .card-body .box5 img.second {
+  width: 2.1875rem;
+  align-self: flex-start;
+  margin-left: 0.1875rem;
+}
+.card .card-body .message {
+  padding: 0.8125em 0.8125em;
+  width: 100%;
+  border-radius: 0.3125rem;
+}
+.card .card-body .message .content {
+  display: grid;
+  grid-template-areas: "img para " "img time " "img ano";
+  justify-content: start;
+}
+.card .card-body .message .content img {
+  width: 2.5rem;
+  align-self: flex-start;
+  grid-area: img;
+}
+.card .card-body .message .content p {
+  margin-left: 0.625em;
+  grid-area: para;
+  font-size: clamp(0.375rem, 0.5rem + 2vw, 1rem);
+  line-height: 1.4;
+  color: hsl(219deg, 12%, 42%);
+}
+.card .card-body .message .content p .name {
+  font-weight: 800;
+  color: hsl(224deg, 21%, 14%);
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+.card .card-body .message .content p .name:hover {
+  color: hsl(219deg, 85%, 26%);
+}
+.card .card-body .message .content p .tag {
+  color: hsl(219deg, 12%, 42%);
+  font-weight: 800;
+  font-size: clamp(0.375rem, 0.375rem + 2vw, 1rem);
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.card .card-body .message .content p .tag:hover {
+  color: hsl(219deg, 85%, 26%);
+}
+.card .card-body .message .content p .tag2 {
+  color: hsl(224deg, 21%, 14%);
+}
+.card .card-body .message .time {
+  grid-area: time;
+  margin-left: 0.625em;
+  font-size: 0.8125rem;
+  margin-top: 0.375em;
+  color: hsl(219deg, 12%, 42%);
+}/*# sourceMappingURL=style.css.map */

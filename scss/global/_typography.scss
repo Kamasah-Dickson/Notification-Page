@@ -1,0 +1,19 @@
+@use "../utils" as u;
+@use "../global/colors" as g;
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: "Josefin Sans", sans-serif;
+}
+
+body {
+	font-size: u.rem(18);
+	background-color: g.$Very-light-grayish-blue;
+	min-height: 100vh;
+	
+}
+
+h1 {
+	font-size: clamp(u.rem(9), u.rem(10) + 2vw, u.rem(27));
+}
