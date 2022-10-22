@@ -20,19 +20,19 @@
 				color: g.$White;
 				background-color: g.$Blue;
 				font-weight: g.$small;
-				font-size: clamp(u.rem(5), u.rem(10) + 2vw, u.rem(20));
+				font-size: clamp(u.rem(5), u.rem(10) + 2vw, u.rem(18));
 				padding: u.em(3) u.em(10);
 				border-radius: u.rem(5);
 			}
 		}
 		.mark {
 			font-weight: g.$small;
-			font-size: clamp(u.rem(6), u.rem(7) + 2vw, u.rem(22));
+			font-size: clamp(u.rem(6), u.rem(7) + 2vw, u.rem(19));
 			cursor: pointer;
-            transition:.3s ease;
-            &:hover{
-                color:g.$Blue;
-            }
+			transition: 0.3s ease;
+			&:hover {
+				color: g.$Blue;
+			}
 		}
 	}
 	.card-body {
@@ -100,20 +100,19 @@
 					.name {
 						font-weight: g.$large;
 						color: g.$Very-dark-blue;
-                        transition: .3s ease;
-                        cursor:pointer;
-                        &:hover{
-                            color: g.$Blue;
-                        }
-
-					}
-				
-					.tag {
-                        color: g.$Dark-grayish-blue;
-                        font-weight: g.$large;
-                        font-size: clamp(u.rem(6), u.rem(6) + 2vw, u.rem(16));
+						transition: 0.3s ease;
 						cursor: pointer;
-                        transition: .3s ease;
+						&:hover {
+							color: g.$Blue;
+						}
+					}
+
+					.tag {
+						color: g.$Dark-grayish-blue;
+						font-weight: g.$large;
+						font-size: clamp(u.rem(6), u.rem(6) + 2vw, u.rem(16));
+						cursor: pointer;
+						transition: 0.3s ease;
 						&:hover {
 							color: g.$Blue;
 						}
