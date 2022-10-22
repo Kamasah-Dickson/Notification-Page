@@ -1,5 +1,6 @@
 @use "../utils" as u;
 @use "../global/colors" as g;
+@use "../global/fonts" as f;
 * {
 	padding: 0;
 	margin: 0;
@@ -11,9 +12,34 @@ body {
 	font-size: u.rem(18);
 	background-color: g.$Very-light-grayish-blue;
 	min-height: 100vh;
-	
 }
 
 h1 {
 	font-size: clamp(u.rem(9), u.rem(10) + 2vw, u.rem(22));
+}
+
+img{
+	background-position: center center;
+	background-size: cover;
+	border-radius: 100%;
+	&:hover {
+		border: u.rem(3) solid g.$Blue;
+		transition: border 0.1s ease-in-out;
+	}
+}
+
+.attribution {
+	font-size: clamp(u.rem(7), u.rem(8) + 1vw, u.rem(20));
+	margin-top: u.rem(10);
+	text-align: center;
+	font-weight: f.$large;
+	background-color: g.$Light-grayish-blue-1;
+	color: g.$Blue;
+	a {
+		color: g.$Very-dark-blue;
+	}
+
+	@include u.breakpoints(medium) {
+		display: none;
+	}
 }

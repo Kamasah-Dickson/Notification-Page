@@ -1,37 +1,69 @@
 @use "../utils" as u;
 @use "../global" as g;
 .card {
-	width: min(100% - u.em(15), u.rem(700));
+	width: min(100% - u.em(15), u.rem(740));
 	margin-inline: auto;
 	background-color: g.$White;
 	padding: u.em(15) u.rem(12);
-	margin-top: u.em(10);
-	border-radius: u.rem(20);
+	margin-block: u.em(10);
+	border-radius: u.rem(5);
+	box-shadow: 0 0 u.rem(6) u.rem(-2) g.$Grayish-blue;
 
 	@include u.breakpoints(medium) {
-		padding: u.em(17) u.rem(25);
+		padding: u.em(22) u.rem(30);
+		border-radius: u.rem(25);
 	}
 	.card-header {
 		@include u.flex;
-		margin-bottom: u.em(35);
+		margin-bottom: u.em(25);
+		@include u.breakpoints(medium) {
+			margin-bottom: u.em(20);
+		}
 		.notifications {
 			font-weight: g.$large;
+			cursor: pointer;
 			.count {
 				color: g.$White;
 				background-color: g.$Blue;
-				font-weight: g.$small;
-				font-size: clamp(u.rem(5), u.rem(10) + 2vw, u.rem(18));
+				font-weight: g.$large;
+				font-size: clamp(u.rem(5), u.rem(10) + 2vw, u.rem(16));
 				padding: u.em(3) u.em(10);
 				border-radius: u.rem(5);
+				cursor: pointer;
+			}
+		}
+		.me {
+			position: relative;
+			top: 0;
+			right: 0;
+			width: u.rem(55);
+			height: u.rem(55);
+			border-radius: 100%;
+			margin-bottom: u.em(10);
+			display: none;
+			overflow: hidden;
+
+			a {
+				img {
+					width: 100%;
+					border-radius: 100%;
+				}
+			}
+			@include u.breakpoints(medium) {
+				display: block;
 			}
 		}
 		.mark {
 			font-weight: g.$small;
-			font-size: clamp(u.rem(6), u.rem(7) + 2vw, u.rem(19));
+			font-size: clamp(u.rem(6), u.rem(7) + 2vw, u.rem(17));
 			cursor: pointer;
 			transition: 0.3s ease;
+			color: g.$Dark-grayish-blue;
+		}
+		.hover {
 			&:hover {
 				color: g.$Blue;
+				transition: 0.4s ease;
 			}
 		}
 	}
@@ -59,12 +91,18 @@
 			.anonymous {
 				border: u.rem(1) solid g.$Light-grayish-blue-2;
 				padding: u.em(15);
-				font-size: clamp(u.rem(6), u.rem(8) + 2vw, u.rem(16));
+				font-size: clamp(u.rem(6), u.rem(8) + 2vw, u.rem(18));
 				grid-area: ano;
 				margin-top: u.rem(15);
 				color: g.$Dark-grayish-blue;
 				line-height: 1.4;
+				margin-bottom: u.em(20);
 				border-radius: u.rem(7);
+				&:hover {
+					cursor: pointer;
+					background-color: g.$Light-grayish-blue-1;
+					transition: 0.5s ease-in-out;
+				}
 			}
 		}
 		.box5 {
@@ -73,12 +111,18 @@
 				width: u.rem(35);
 				align-self: flex-start;
 				margin-left: u.rem(3);
+				border-radius: unset;
+				cursor: pointer;
+				&:hover {
+					border: none;
+					transition: unset;
+				}
 			}
 		}
 		.message {
 			padding: u.em(13) u.em(13);
 			width: 100%;
-			border-radius: u.rem(5);
+			border-radius: u.rem(7);
 			.content {
 				display: grid;
 				grid-template-areas:
@@ -87,20 +131,23 @@
 					"img ano";
 				justify-content: start;
 				img {
-					width: u.rem(40);
+					width: clamp(u.rem(16), u.rem(40) + 2vw, u.rem(50));
 					align-self: flex-start;
 					grid-area: img;
+					@include u.breakpoints(medium) {
+						margin-right: u.rem(15);
+					}
 				}
 				p {
 					margin-left: u.em(10);
 					grid-area: para;
-					font-size: clamp(u.rem(6), u.rem(8) + 2vw, u.rem(16));
+					font-size: clamp(u.rem(6), u.rem(8) + 2vw, u.rem(17));
 					line-height: 1.4;
 					color: g.$Dark-grayish-blue;
 					.name {
 						font-weight: g.$large;
 						color: g.$Very-dark-blue;
-						transition: 0.3s ease;
+						transition: 0.6s ease-in-out;
 						cursor: pointer;
 						&:hover {
 							color: g.$Blue;
@@ -110,9 +157,9 @@
 					.tag {
 						color: g.$Dark-grayish-blue;
 						font-weight: g.$large;
-						font-size: clamp(u.rem(6), u.rem(6) + 2vw, u.rem(16));
+						font-size: clamp(u.rem(6), u.rem(6) + 2vw, u.rem(17));
 						cursor: pointer;
-						transition: 0.3s ease;
+						transition: 0.5s ease-in-out;
 						&:hover {
 							color: g.$Blue;
 						}
@@ -125,7 +172,8 @@
 			.time {
 				grid-area: time;
 				margin-left: u.em(10);
-				font-size: u.rem(13);
+				font-size: clamp(u.rem(8), u.rem(6) + 2vw, u.rem(17));
+
 				margin-top: u.em(6);
 				color: g.$Dark-grayish-blue;
 			}
