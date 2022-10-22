@@ -74,7 +74,8 @@
 		.box1,
 		.box2,
 		.box3 {
-			background-color: g.$Very-light-grayish-blue;
+			background-color: g.$Light-grayish-blue-1;
+			transition: background-color .3s ease;
 			p {
 				position: relative;
 				span.indicator {

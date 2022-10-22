@@ -127,7 +127,8 @@ img:hover {
 .card .card-body .box1,
 .card .card-body .box2,
 .card .card-body .box3 {
-  background-color: hsl(210deg, 60%, 98%);
+  background-color: hsl(211deg, 68%, 94%);
+  transition: background-color 0.3s ease;
 }
 .card .card-body .box1 p,
 .card .card-body .box2 p,
