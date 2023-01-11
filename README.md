@@ -1,6 +1,6 @@
 # Frontend Mentor - Notifications page solution
 
-Just a basic UX/UI notification page I created to improve my confidence in CSS,HTML,Sass and JavaScript.
+Just a basic HTML,CSS notification page.
 - Live Site URL: [live site URL here](https://kamasah-dickson.github.io/Notification-Page/)
 
 
