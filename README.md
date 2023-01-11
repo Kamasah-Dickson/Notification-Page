@@ -1,6 +1,8 @@
 # Frontend Mentor - Notifications page solution
 
-This is a solution to the [Notifications page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/notifications-page-DqK5QAmKbC). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
+Just a basic UX/UI notification page I created to improve my confidence in CSS,HTML,Sass and JavaScript.
+- Live Site URL: [live site URL here](https://kamasah-dickson.github.io/Notification-Page/)
+
 
 ## Table of contents
 
